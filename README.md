@@ -6,6 +6,20 @@
 [![Claude Code](https://img.shields.io/badge/Claude-Code%20Skill-blue)](https://docs.claude.com/en/docs/claude-code)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+## Table of Contents
+
+- [What is E2B Skill?](#-what-is-e2b-skill)
+- [What Can Claude Do With E2B?](#-what-can-claude-do-with-e2b)
+- [Core Features](#️-core-features)
+- [Installation](#-installation)
+- [Usage Examples](#-usage-examples)
+- [Use Cases](#-use-cases)
+- [Advanced Features](#️-advanced-features)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Why Choose E2B Skill?](#-why-choose-e2b-skill)
+
 ## 🚀 What is E2B Skill?
 
 E2B Skill is a powerful Claude Code skill that gives Claude **expert knowledge of the E2B SDK** for building applications with secure, isolated cloud sandboxes.
