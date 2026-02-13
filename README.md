@@ -24,12 +24,8 @@ Hooks that run automatically:
 |-------|---------|--------------|
 | **Browser** | `/browser` | Debug-first browser automation via Playwright - every page load captures console errors, failed requests, network stats |
 | **claude-agent-sdk** | `/claude-agent-sdk` | Reference for building apps with Claude Agent SDK (TypeScript/Python) |
-| **e2b** | `/e2b` | Execute code in secure E2B cloud sandboxes with MCP gateway |
-| **keboola-data-app** | `/keboola-data-app` | Streamlit + Google Sheets patterns for Keboola data apps |
-| **polymarket** | `/polymarket` | Build trading bots on Polymarket (py-clob-client SDK, WebSocket, order placement) |
 | **post-merge** | `/post-merge` | After merging a PR: switch to main, pull, delete branch, watch CI/CD |
-| **second-opinion** | `/second-opinion` | Get external AI review from OpenAI via Codex CLI |
-| **skill-creator** | `/skill-creator` | Guide for creating new Claude Code skills |
+| **second-opinion** | `/second-opinion` | Get external AI review from Google Gemini |
 | **swarm** | `/swarm` | Multi-agent implementation: Tech Lead spawns Developer agents per phase, reviews PRs, handles retries |
 
 ### `CLAUDE.md` - Global Instructions
@@ -41,7 +37,6 @@ Rules that shape how Claude behaves in every project:
 - Parallel sub-agents for independent tasks (mandatory)
 - No mock implementations, no TODO stubs, no hardcoded values
 - Fail-fast on missing config (no silent defaults)
-- Structured JSON logging for all server apps
 - Clean commits (no Co-Authored-By, no Generated-with footer)
 
 ### `.zshrc` - Shell Aliases

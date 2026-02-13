@@ -230,6 +230,7 @@
     ]
   },
   "enabledPlugins": {
+    "claude-hud@claude-hud": true,
     "frontend-design@claude-code-plugins": true,
     "explanatory-output-style@claude-code-plugins": true,
     "agent-sdk-dev@claude-code-plugins": true,
@@ -239,5 +240,6 @@
     "component-developer@keboola-claude-kit": false,
     "dataapp-developer@keboola-claude-kit": false
   },
-  "language": "Czech"
+  "language": "Czech",
+  "skipDangerousModePermissionPrompt": true
 }
