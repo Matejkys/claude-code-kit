@@ -1,4 +1,6 @@
-# Personal Claude Code Instructions
+# Global Instructions for Claude Code
+
+These instructions apply to all projects unless overridden by project-specific CLAUDE.md files.
 
 ## Language
 
@@ -6,21 +8,41 @@
 - **Write all files in English** (code, comments, documentation, config files)
 - Variable names, function names, commit messages - all in English
 
+## Response Style
+- Start every message with 🤖
+- Be concise and direct
+- Use code examples when helpful
+- Think thoroughly before coding. Write 2-3 reasoning paragraphs for complex decisions.
+- Do NOT use emoji in text output (except the starting 🤖)
+
 ## Research
 
-- **Use Perplexity MCP** before implementing any external API, library, or technology you haven't used in this project before
+- **Use Perplexity MCP** (or WebSearch/WebFetch) before implementing any external API, library, or technology you haven't used in this project before
 - When encountering errors or unexpected behavior - research first
 - When deciding between approaches - research to find best practices
 
-## General
+## Task Management
 
-- Do NOT use emoji in text output
 - **ALWAYS use parallel sub-agents** (Task tool) when working on multiple independent tasks (writing tests, fixing files, implementing features). This is NOT optional - spawn one agent per task for maximum speed.
 - For tasks with 3+ steps, **create a plan first** (use TodoWrite) and mark tasks as completed when done
-- **Document in code comments**, not separate files. Create documentation files (README, docs/) only when explicitly requested
-- **Write tests for all new code** - business logic, API endpoints, utilities. Skip only: config files, type definitions, trivial one-liners
+- When exploring a feature or diagnosing a bug, always complete the full investigation and provide a summary of findings before stopping. Do not leave investigations half-done.
 
-- When exploring a feature or diagnosing a bug, always complete the full investigation and provide a summary of findings before stopping. Do not leave investigations half-done. If the task is large, break it into phases and complete at least phase 1 with actionable output.
+## Code Style & Comments
+
+- Write clean, readable and modular code
+- Follow language-specific best practices
+- Use descriptive variable names
+- Use clear, consistent naming
+- Respect style of existing code
+- Focus on core functionality before optimization
+
+### Comments
+- **ALWAYS try to add more helpful and explanatory comments** into our codebase
+- **NEVER delete old comments** - unless they are wrong or obsolete
+- Include LOTS of explanatory comments in your code
+- Document all changes and their reasoning IN THE COMMENTS YOU WRITE
+- When writing comments, use clear and easy-to-understand language. Write in short sentences.
+- **Document in code comments**, not separate files. Create documentation files (README, docs/) only when explicitly requested
 
 ## Implementation Integrity - No Mocks, No Skipping
 
@@ -99,6 +121,20 @@ function getRequiredEnv(key: string): string {
 }
 ```
 
+## Error Fixing
+
+- DO NOT JUMP TO CONCLUSIONS! Consider multiple possible causes before deciding.
+- Explain the problem in plain English.
+- Make minimal changes necessary, changing as few lines of code as possible.
+
+## Testing
+
+- **Write tests for all new code** - business logic, API endpoints, utilities
+- Skip only: config files, type definitions, trivial one-liners
+- Keep test coverage high
+- Use meaningful test descriptions
+- Verify each new feature works by telling the user how to test it
+
 ## Git Commits & Pull Requests
 
 When creating git commits:
@@ -108,6 +144,12 @@ When creating git commits:
 When creating pull requests:
 - Do NOT include "🤖 Generated with Claude Code" footer in PR description
 - Keep PR descriptions clean and focused on the changes
+
+**CRITICAL - Pull Request Merging:**
+- **NEVER merge PRs on your own** - always wait for explicit user approval
+- After creating a PR, report the PR URL to the user and STOP
+- Only merge when the user explicitly says "merge it", "mergni to", or similar
+- This rule has no exceptions - even if the PR looks trivial or the user asked to "create and merge"
 
 ## Server Logging for Backtesting
 

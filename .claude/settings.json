@@ -6,7 +6,6 @@
       "WebFetch",
       "WebSearch",
       "Skill",
-
       "Bash(find:*)",
       "Bash(ls:*)",
       "Bash(grep:*)",
@@ -33,7 +32,6 @@
       "Bash(lsof:*)",
       "Bash(mkdir -p /tmp:*)",
       "Bash(timeout:*)",
-
       "Bash(git status:*)",
       "Bash(git log:*)",
       "Bash(git diff:*)",
@@ -54,7 +52,6 @@
       "Bash(git reset:*)",
       "Bash(git init:*)",
       "Bash(git ls-tree:*)",
-
       "Bash(python:*)",
       "Bash(python3:*)",
       "Bash(pip show:*)",
@@ -63,12 +60,10 @@
       "Bash(.venv/bin/python:*)",
       "Bash(source .venv/bin/activate)",
       "Bash(pytest:*)",
-
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
       "Bash(npx tsc:*)",
       "Bash(codex:*)",
-
       "Bash(make:*)",
       "Bash(curl:*)",
       "Bash(scp:*)",
@@ -78,7 +73,6 @@
       "Bash(terraform:*)",
       "Bash(aws:*)",
       "Bash(openssl:*)",
-
       "WebFetch(domain:github.com)",
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_snapshot",
@@ -98,8 +92,13 @@
       "mcp__atlassian__getConfluencePageDescendants"
     ],
     "deny": [
+      "Bash(gh pr merge:*)",
       "Read(**/.env)",
-      "Read(**/.env.*)",
+      "Read(**/.env.local)",
+      "Read(**/.env.development)",
+      "Read(**/.env.production)",
+      "Read(**/.env.staging)",
+      "Read(**/.env.test)",
       "Read(**/credentials.json)",
       "Read(**/credentials.yaml)",
       "Read(**/credentials.yml)",
@@ -145,7 +144,11 @@
       "Read(**/apikey*)",
       "Read(**/*apikey*)",
       "Write(**/.env)",
-      "Write(**/.env.*)",
+      "Write(**/.env.local)",
+      "Write(**/.env.development)",
+      "Write(**/.env.production)",
+      "Write(**/.env.staging)",
+      "Write(**/.env.test)",
       "Write(**/credentials.json)",
       "Write(**/secrets.json)",
       "Write(**/*.pem)",
@@ -156,7 +159,11 @@
       "Write(**/secrets*)",
       "Write(**/*secrets*)",
       "Edit(**/.env)",
-      "Edit(**/.env.*)",
+      "Edit(**/.env.local)",
+      "Edit(**/.env.development)",
+      "Edit(**/.env.production)",
+      "Edit(**/.env.staging)",
+      "Edit(**/.env.test)",
       "Edit(**/credentials.json)",
       "Edit(**/secrets.json)",
       "Edit(**/*.pem)",
@@ -229,7 +236,8 @@
     "commit-commands@claude-code-plugins": true,
     "feature-dev@claude-code-plugins": true,
     "developer@keboola-claude-kit": true,
-    "component-developer@keboola-claude-kit": true,
-    "dataapp-developer@keboola-claude-kit": true
-  }
+    "component-developer@keboola-claude-kit": false,
+    "dataapp-developer@keboola-claude-kit": false
+  },
+  "language": "Czech"
 }
